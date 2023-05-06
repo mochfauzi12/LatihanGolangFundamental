@@ -1,9 +1,8 @@
 package main
 
 import (
-	"LatihanGolangFundamental/array"
 	"LatihanGolangFundamental/logikaifelse"
-	//"LatihanGolangFundamental/perulanggan"
+	"LatihanGolangFundamental/slice"
 )
 
 // "LatihanGolangFundamental/calculation"
@@ -37,6 +36,8 @@ func main() {
 	//perulanggan.Looping()
 
 	//perulanggan.Kuis()
-	array.Array1()
+	//array.Array1()
+
+	slice.Slice()
 
 }
