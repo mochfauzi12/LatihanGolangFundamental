@@ -2,7 +2,7 @@ package main
 
 import (
 	"LatihanGolangFundamental/logikaifelse"
-	"LatihanGolangFundamental/slice"
+	"LatihanGolangFundamental/map1"
 )
 
 // "LatihanGolangFundamental/calculation"
@@ -38,6 +38,9 @@ func main() {
 	//perulanggan.Kuis()
 	//array.Array1()
 
-	slice.Slice()
+	//slice.Slice()
+
+	//map1.Map()
+	map1.Map1()
 
 }
