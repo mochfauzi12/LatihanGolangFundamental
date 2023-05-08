@@ -1,8 +1,9 @@
 package main
 
 import (
-	"LatihanGolangFundamental/logikaifelse"
 	"LatihanGolangFundamental/map1"
+	sliceandmap "LatihanGolangFundamental/sliceAndmap"
+	"fmt"
 )
 
 // "LatihanGolangFundamental/calculation"
@@ -28,8 +29,8 @@ func main() {
 
 	// fmt.Println(Age)
 
-	logikaifelse.Logic()
-	logikaifelse.Score()
+	// logikaifelse.Logic()
+	// logikaifelse.Score()
 
 	//switchcase.Switchcase1()
 
@@ -42,5 +43,11 @@ func main() {
 
 	//map1.Map()
 	map1.Map1()
+
+	fmt.Println("====================================================================================")
+
+	//sliceandmap.Slice_Map()
+
+	sliceandmap.Quiz()
 
 }
