@@ -1,6 +1,7 @@
 package main
 
 import (
+	basicfunction "LatihanGolangFundamental/BasicFunction"
 	"LatihanGolangFundamental/map1"
 	sliceandmap "LatihanGolangFundamental/sliceAndmap"
 	"fmt"
@@ -44,10 +45,26 @@ func main() {
 	//map1.Map()
 	map1.Map1()
 
-	fmt.Println("====================================================================================")
+	//fmt.Println("====================================================================================")
 
 	//sliceandmap.Slice_Map()
 
 	sliceandmap.Quiz()
+	fmt.Println("====================================================================================")
 
+	//basicfunction.PrintMyResult("Saya Senang")
+	sentence := basicfunction.PrintMyResult("Saya Senang ")
+	fmt.Println(sentence)
+
+	fmt.Println("====================================================================================")
+
+	result1 := basicfunction.Add(45, 67)
+	fmt.Println(result1)
+
+	fmt.Println("====================================================================================")
+
+	luas1, keliling1 := basicfunction.Calculation(10, 2)
+
+	fmt.Println(luas1)
+	fmt.Println(keliling1)
 }
