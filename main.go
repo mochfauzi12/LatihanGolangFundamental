@@ -63,8 +63,21 @@ func main() {
 
 	fmt.Println("====================================================================================")
 
-	luas1, keliling1 := basicfunction.Calculation(10, 2)
+	// luas1, keliling1 := basicfunction.Calculation(10, 2)
 
-	fmt.Println(luas1)
-	fmt.Println(keliling1)
+	// fmt.Println(luas1)
+	// fmt.Println(keliling1)
+
+	//basicfunction.Sum()
+
+	result, err := basicfunction.Calculate(10, 2, "%")
+	if err != nil {
+
+		fmt.Println("Terjadi Error")
+		fmt.Println(err.Error())
+
+	}
+
+	fmt.Println(result)
+
 }
