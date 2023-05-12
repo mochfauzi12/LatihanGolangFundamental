@@ -4,6 +4,7 @@ import (
 	basicfunction "LatihanGolangFundamental/BasicFunction"
 	"LatihanGolangFundamental/map1"
 	sliceandmap "LatihanGolangFundamental/sliceAndmap"
+	structexample "LatihanGolangFundamental/structExample"
 	"fmt"
 )
 
@@ -79,5 +80,9 @@ func main() {
 	}
 
 	fmt.Println(result)
+
+	fmt.Println("====================================================================================")
+
+	structexample.Tampil()
 
 }
