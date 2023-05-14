@@ -11,25 +11,45 @@ type Students struct {
 	IsActive  bool
 }
 
+//embed struct example
+
+type Groups struct {
+	Name        string
+	Admin       Students
+	Students    []Students
+	IsAvailable bool
+}
+
 func Tampil() {
 
-	student := Students{
-		Id:        1,
-		Firstname: "Taufik",
-		Lastname:  "Fauzi",
-		Email:     "Taufiksavalas@gmail.com",
-		Address:   "Salatiga Kota ",
-		IsActive:  false,
-	}
+	// student := Students{
+	// 	Id:        1,
+	// 	Firstname: "Taufik",
+	// 	Lastname:  "Fauzi",
+	// 	Email:     "Taufiksavalas@gmail.com",
+	// 	Address:   "Salatiga Kota ",
+	// 	IsActive:  false,
+	// }
 
-	student1 := Students{}
-	student1.Id = 2
-	student1.Firstname = "Taufik Bala Salatiga"
-	student1.Lastname = "Salatiga "
-	student1.Email = "taufik@gmail.com"
-	student1.Address = "Jln.Raya salatiga, pasar kembangsari "
-	student1.IsActive = true
+	// student1 := Students{
+	// 	Id:        0,
+	// 	Firstname: "ananda",
+	// 	Lastname:  "putri",
+	// 	Email:     "ananda@gmail.com",
+	// 	Address:   "Jalan raya demangan , eromoko",
+	// 	IsActive:  false,
+	// }
 
-	fmt.Println(student)
-	fmt.Println(student1)
+	student := Students{1, "Maman", "Surahman", "maamansurahman@gmail.com", "Demangan City", true}
+	student1 := Students{2, "Maman", "Abdul", "Abdulrohman@gmail.com", "Ngungahan City", true}
+	displayStudent1 := DisplayStudent(student)
+	displayStudent2 := DisplayStudent(student1)
+	fmt.Println(displayStudent1)
+	fmt.Println(displayStudent2)
+
+}
+
+func DisplayStudent(student Students) string {
+	return fmt.Sprintf("Name: %s %s, Email: %s", student.Firstname, student.Lastname, student.Email)
+
 }
