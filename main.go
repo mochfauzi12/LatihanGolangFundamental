@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"LatihanGolangFundamental/pointer"
+	"fmt"
+)
 
 // basicfunction "LatihanGolangFundamental/BasicFunction"
 // "LatihanGolangFundamental/map1"
@@ -20,7 +23,7 @@ type Students struct {
 	IsActive  bool
 }
 
-//embed struct example
+// embed struct example
 type Groups struct {
 	Name        string
 	Admin       Students
@@ -28,7 +31,21 @@ type Groups struct {
 	IsAvailable bool
 }
 
+func (group Groups) DisplayStudent() {
+	fmt.Printf("Name: %s\n", group.Name)
+	fmt.Println("")
+	fmt.Printf("Member Count: %d\n", len(group.Students))
+
+	fmt.Println("Name of Member :")
+
+	for _, student := range group.Students {
+		fmt.Println(student.Firstname)
+	}
+
+}
+
 func main() {
+
 	// fmt.Println("Bahasa Pemograman Golang")
 
 	// result := calculation.Add(100, 3000000000)
@@ -103,14 +120,16 @@ func main() {
 	// structexample.Tampil()
 	//structexample.DisplayStudent(structexample.students)
 
-	student := Students{1, "Maman", "Surahman", "maamansurahman@gmail.com", "Demangan City", true}
-	student1 := Students{2, "Maman", "Abdul", "Abdulrohman@gmail.com", "Ngungahan City", true}
+	// student := Students{1, "Maman", "Surahman", "maamansurahman@gmail.com", "Demangan City", true}
+	// student1 := Students{2, "Maman", "Abdul", "Abdulrohman@gmail.com", "Ngungahan City", true}
 
-	students := []Students{student, student1}
+	// students := []Students{student, student1}
 
-	group := Groups{"Cracker", student, students, true}
+	// group := Groups{"Cracker", student, students, true}
 
-	DisplayGroup(group)
+	// DisplayGroup(group)
+
+	pointer.Pointer1()
 }
 
 func DisplayGroup(group Groups) {
@@ -126,6 +145,13 @@ func DisplayGroup(group Groups) {
 
 }
 
+// method
+func (student Students) Display() string {
+	return fmt.Sprintf("Name: %s %s, Email: %s", student.Firstname, student.Lastname, student.Email)
+
+}
+
+// function
 func DisplayStudent(student Students) string {
 	return fmt.Sprintf("Name: %s %s, Email: %s", student.Firstname, student.Lastname, student.Email)
 
