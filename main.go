@@ -14,37 +14,55 @@ import (
 // "LatihanGolangFundamental/calculation"
 // "LatihanGolangFundamental/perkalian"
 
-type Students struct {
-	Id        int
-	Firstname string
-	Lastname  string
-	Email     string
-	Address   string
-	IsActive  bool
+// type Students struct {
+// 	Id        int
+// 	Firstname string
+// 	Lastname  string
+// 	Email     string
+// 	Address   string
+// 	IsActive  bool
+// }
+
+// // embed struct example
+// type Groups struct {
+// 	Name        string
+// 	Admin       Students
+// 	Students    []Students
+// 	IsAvailable bool
+// }
+
+// func (group Groups) DisplayStudent() {
+// 	fmt.Printf("Name: %s\n", group.Name)
+// 	fmt.Println("")
+// 	fmt.Printf("Member Count: %d\n", len(group.Students))
+
+// 	fmt.Println("Name of Member :")
+
+// 	for _, student := range group.Students {
+// 		fmt.Println(student.Firstname)
+// 	}
+
+// }
+
+type Student struct {
+	ID   int     `json:"id"`
+	Name string  `json:"name"`
+	GPA  float32 `json:"gpa"`
 }
 
-// embed struct example
-type Groups struct {
-	Name        string
-	Admin       Students
-	Students    []Students
-	IsAvailable bool
-}
-
-func (group Groups) DisplayStudent() {
-	fmt.Printf("Name: %s\n", group.Name)
-	fmt.Println("")
-	fmt.Printf("Member Count: %d\n", len(group.Students))
-
-	fmt.Println("Name of Member :")
-
-	for _, student := range group.Students {
-		fmt.Println(student.Firstname)
-	}
-
+func (student *Student) graduated() {
+	student.Name = student.Name + " S.KOM "
 }
 
 func main() {
+
+	student := Student{1, "Moch Fauzi", 3.26}
+
+	fmt.Println(student.Name)
+
+	student.graduated()
+
+	fmt.Println(student.Name)
 
 	// fmt.Println("Bahasa Pemograman Golang")
 
@@ -132,27 +150,27 @@ func main() {
 	pointer.Pointer1()
 }
 
-func DisplayGroup(group Groups) {
-	fmt.Printf("Name: %s\n", group.Name)
-	fmt.Println("")
-	fmt.Printf("Member Count: %d\n", len(group.Students))
+// func DisplayGroup(group Groups) {
+// 	fmt.Printf("Name: %s\n", group.Name)
+// 	fmt.Println("")
+// 	fmt.Printf("Member Count: %d\n", len(group.Students))
 
-	fmt.Println("Name of Member :")
+// 	fmt.Println("Name of Member :")
 
-	for _, student := range group.Students {
-		fmt.Println(student.Firstname)
-	}
+// 	for _, student := range group.Students {
+// 		fmt.Println(student.Firstname)
+// 	}
 
-}
+// }
 
 // method
-func (student Students) Display() string {
-	return fmt.Sprintf("Name: %s %s, Email: %s", student.Firstname, student.Lastname, student.Email)
+// func (student Students) Display() string {
+// 	return fmt.Sprintf("Name: %s %s, Email: %s", student.Firstname, student.Lastname, student.Email)
 
-}
+// }
 
-// function
-func DisplayStudent(student Students) string {
-	return fmt.Sprintf("Name: %s %s, Email: %s", student.Firstname, student.Lastname, student.Email)
+// // function
+// func DisplayStudent(student Students) string {
+// 	return fmt.Sprintf("Name: %s %s, Email: %s", student.Firstname, student.Lastname, student.Email)
 
-}
+// }
